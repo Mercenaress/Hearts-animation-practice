@@ -1,0 +1,55 @@
+body {
+    background-color: hotpink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 450px;
+}
+
+.heart {
+    background-color: rgb(224, 0, 26);
+    width: 500px;
+    height: 500px;
+    position: relative;
+    transform: rotate(45deg);
+    animation: animateHeart 1.2s infinite;
+}
+
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: '';
+    width: 500px;
+    height: 500px;
+    background-color: rgb(224, 0, 26);
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: -250px;
+}
+
+.heart::after {
+    top: -250px;
+}
+
+@keyframes animateHeart {
+    0% {
+        transform: rotate(45deg) scale(0.8);
+    }
+    5% {
+        transform: rotate(45deg) scale(0.9);
+    }
+    10% {
+        transform: rotate(45deg) scale(0.8);
+    }
+    15% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+        transform: rotate(45deg) scale(0.8);
+    }
+    100% {
+        transform: rotate(45deg) scale(0.8);
+    }
+}
